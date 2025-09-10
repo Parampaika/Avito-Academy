@@ -176,4 +176,9 @@ stopwords = ['i',
  'won',
  "won't",
  'wouldn',
- "wouldn't"]
+ "wouldn't"
+]
+
+
+regexps_to_change = [(r'[\s\W]+(' + stopword + r')[\s\W]+', 'DELETED ') for stopword in stopwords]
+regexps_to_change.append(('DELETED', '[DELETED]'))
