@@ -1,4 +1,4 @@
-stopwords = ['i',
+STOPWORDS = ['i',
  'me',
  'my',
  'myself',

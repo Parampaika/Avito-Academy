@@ -1,12 +1,12 @@
 import re
-from english_stopwords import stopwords
+from english_stopwords import STOPWORDS
 
 with open('./hamlet.txt') as f:
     hamlet = f.read()
 
-for stopword in stopwords:
+for stopword in STOPWORDS:
     hamlet = re.sub(
-        r'[\s\W]+(' + stopword + r')[\s\W]+', 'DELETED ', hamlet, flags=re.IGNORECASE
+        r'[\s\W]+(' + stopword + r')[\s\W]+', ' DELETED ', hamlet, flags=re.IGNORECASE
     )
 
 hamlet = re.sub(
